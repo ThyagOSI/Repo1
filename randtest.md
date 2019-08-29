@@ -6,10 +6,10 @@ uid: restRequestReference
 
 Use the following REST requests for configuring the Edge Data Store, Edge Connectivity (including Modbus TCP connectivity and OPC UA connectivity), and storage.
 
-| `Endpoint`          | `HTTP Method`    | `Description` |
+| **Endpoint**          | **HTTP Method**    | **Description** |
 |-------------------|----------------|-------------|
 | http://localhost:5590/api/v1/configuration| GET | Get all components configurations in Edge System|
-| `System Routes` |  |  |
+| **`System Routes`** |  |  |
 | http://localhost:5590/api/v1/configuration/System/Logging  | GET | Get logging configuration for the Edge System |
 | | PUT | Replace logging configuration for the Edge Data Store |
 | `Diagnostics` | | |
@@ -28,18 +28,18 @@ Use the following REST requests for configuring the Edge Data Store, Edge Connec
 | http://localhost:5590/api/v1/configuration/{ComponentId}/Logging  | GET | Get logging configuration of Adapter component |
 | | PUT | Replace logging configuration for Adapter component |
 | `Periodic Egress Endpoints` | | |
-| http://localhost:5590/api/v1/configuration/storage/PeriodicEgressEndpoints | GET | Get all periodic egress targets |
+| http://localhost:5590/api/v1/configuration/Storage/PeriodicEgressEndpoints | GET | Get all periodic egress targets |
 | | POST | Creates egress endpoints if not present, otherwise fails |
 | | PUT | Replaces all egress endpoints |
 | | DELETE | Deletes all egress endpoints |
-| http://localhost:5590/api/v1/configuration/storage/PeriodicEgressEndpoints/{Id} | GET | Get an individual periodic egress endpoint |
+| http://localhost:5590/api/v1/configuration/Storage/PeriodicEgressEndpoints/{Id} | GET | Get an individual periodic egress endpoint |
 | | PUT | Replaces periodic egress endpoint |
 | | DELETE | Deletes periodic egress endpoint |
 | `Storage Runtime` | | |
-| http://localhost:5590/api/v1/configuration/storage/Runtime | GET | Get Runtime Configuration for Edge Storage - stream limits and Ingress debug |
+| http://localhost:5590/api/v1/configuration/Storage/Runtime | GET | Get Runtime Configuration for Edge Storage - stream limits and Ingress debug |
 | | PUT | Replace Runtime Configuration to Edge Storage - stream limits and egress debug |
 | `Systeminfo` | | |
-| http://localhost:5590/api/v1/systeminfo/storage | GET | Get Stream Count, Type Count, and View Count |
+| http://localhost:5590/api/v1/Systeminfo/Storage | GET | Get Stream Count, Type Count, and View Count |
 
 ## Note:
 The difference between the POST and the PUT method is that POST allows to create a
