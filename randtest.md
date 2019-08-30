@@ -8,7 +8,7 @@ The following REST requests can be used for configuring the Edge Data Store, Edg
 
 | **Endpoint**          | **HTTP Method**    | **Description** |
 |-------------------|----------------|-------------|
-| http://localhost:5590/api/v1/configuration| GET | Get all components configurations in Edge System|
+| `http://localhost:5590/api/v1/configuration` | GET | Get all components configurations in Edge System|
 | **`System Routes`** |  |  |
 | http://localhost:5590/api/v1/configuration/System/Logging  | GET | Get logging configuration for the Edge System |
 | | PUT | Replace logging configuration for the Edge Data Store |
@@ -16,12 +16,12 @@ The following REST requests can be used for configuring the Edge Data Store, Edg
 | http://localhost:5590/api/v1/Diagnostics/System  | GET |Retrieve current system level diagnostics information |
 | http://localhost:5590/api/v1/Diagnostics/ProductInformation  | GET |Retrieve current product information |
 | **`Component Configuration`** | | |
-| http://localhost:5590/api/v1/configuration/{ComponentId}  | GET | Get all configurations for the ComponentId |
-| http://localhost:5590/api/v1/configuration/{ComponentId}/DataSource  | GET |Get data source configuration of Adapter component |
+| http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;  | GET | Get all configurations for the ComponentId |
+| `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource`  | GET |Get data source configuration of Adapter component |
 | | POST | Create data source configuration for Adapter component |
 | | PUT | Replace data source configuration for Adapter component |
 | | DELETE | Delete data source configuration for Adapter component |
-| http://localhost:5590/api/v1/configuration/{ComponentId}/DataSelection  | GET | Get data selection configuration of Adapter component |
+| http://localhost:5590/api/v1/configuration//&lt;ComponentId&gt;/DataSelection  | GET | Get data selection configuration of Adapter component |
 | | POST | Create data selection configuration for Adapter component |
 | | PUT | Replace data selection configuration for Adapter component |
 | | DELETE | Delete data selection configuration for Adapter component |
