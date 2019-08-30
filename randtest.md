@@ -10,7 +10,7 @@ The following REST requests can be used for configuring the Edge Data Store, Edg
 |-------------------|----------------|-------------|
 | `http://localhost:5590/api/v1/configuration` | GET | Get all components configurations in Edge System|
 | **`System Routes`** |  |  |
-| http://localhost:5590/api/v1/configuration/System/Logging  | GET | Get logging configuration for the Edge System |
+| ht<span>tp://localhost:5590/api/v1/configuration/System/Logging  | GET | Get logging configuration for the Edge System |
 | | PUT | Replace logging configuration for the Edge Data Store |
 | **`Diagnostics`** | | |
 | http://localhost:5590/api/v1/Diagnostics/System  | GET |Retrieve current system level diagnostics information |
