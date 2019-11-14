@@ -6,40 +6,19 @@ The parameters for on-disk buffering for the adapters that can be configured are
 - OnDiskMaxBufferSizeMB
 - OnDiskBufferLocation
 
-| Parameter                       | Required | Type      | Description   |
+| Parameter | Required | Type | Description |
+| ----------|:--------:| ----:| -----------:|
+| OnDiskMaxBufferSizeMB | Yes | Integer   | This parameter defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). The capacity and type of the storage medium must be taken into account before determining an alternate value for this parameter. If you do not want to specify the any maximum file size then a value of -1 indicates that the buffer size is restricted only by the available free disk space.
 
-| OnDiskMaxBufferSizeMB           | Yes      | Integer   | This parameter defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). The capacity and type of the storage medium must be taken into account before determining an alternate value for this parameter.
-If you do not want to specify the any maximum file size then a value of -1 indicates that the buffer size is restricted only by the available free disk space.
-          |
+Allowed values: -1 or [1, 2147483647]
+Default: -1 |
 
-OnDiskBufferLocation
-|   
+| OnDiskBufferLocation | Optional | String | This parameter defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). The capacity and type of the storage medium must be taken into account before determining an alternate value for this parameter. If you do not want to specify the any maximum file size then a value of -1 indicates that the buffer size is restricted only by the available free disk space. Allowed Value: Path to an existing folder location in the file system.
 
-### OnDiskMaxBufferSizeMB
-```
-Type: Integer
+Default: %ProgramData%\Adapters\Data (Windows OS)
 
-Allowed values: -1 or [1, 2147483647]  
-
-Default: -1
-```
-This parameter defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). The capacity and type of the storage medium must be taken into account before determining an alternate value for this parameter.
-If you do not want to specify the any maximum file size then a value of -1 indicates that the buffer size is restricted only by the available free disk space.
-
-### OnDiskBufferLocation
-```
-Type: String
-
-Allowed Value: Path to an existing folder location in the file system
-
-Default:  %ProgramData%\Adapters\Data (Windows OS)
-
-         /usr/share/OSIsoft/Adapters/Data (Linux OS)
-```
-This parameter defines the location where the data buffer file(s) will be created for the Adapter. A valid location for the file(s) must exist on the file system when specifying the parameter. Parameter takes effect only during startup.
-
-***Note***
-It is strongly recommended *against modifying* the default buffer location value.
+        /usr/share/OSIsoft/Adapters/Data (Linux OS) 
+        ***Note*** It is strongly recommended *against modifying* the default buffer location value |
 
 ### Retrieving the buffering configuration via REST client
 ```
