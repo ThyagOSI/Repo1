@@ -8,16 +8,15 @@ The parameters for on-disk buffering for the adapters that can be configured are
 
 | Parameter | Required | Type | Description |
 | ----------|:--------:| ----:| -----------:|
-| OnDiskMaxBufferSizeMB | Yes | Integer   | This parameter defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). The capacity and type of the storage medium must be taken into account before determining an alternate value for this parameter. If you do not want to specify the any maximum file size then a value of -1 indicates that the buffer size is restricted only by the available free disk space.
-
-Allowed values: -1 or [1, 2147483647]
-Default: -1 |
+| OnDiskMaxBufferSizeMB | Yes | Integer | This parameter defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). The capacity and type of the storage medium must be taken into account before determining an alternate value for this parameter. If you do not want to specify the any maximum file size then a value of -1 indicates that the buffer size is restricted only by the available free disk space.
+                                                Allowed values: -1 or [1, 2147483647] 
+                                                Default: -1 
 
 | OnDiskBufferLocation | Optional | String | This parameter defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). The capacity and type of the storage medium must be taken into account before determining an alternate value for this parameter. If you do not want to specify the any maximum file size then a value of -1 indicates that the buffer size is restricted only by the available free disk space. Allowed Value: Path to an existing folder location in the file system.
 
-Default: %ProgramData%\Adapters\Data (Windows OS)
+                                        Default: %ProgramData%\Adapters\Data (Windows OS)
+                                                /usr/share/OSIsoft/Adapters/Data (Linux OS)
 
-        /usr/share/OSIsoft/Adapters/Data (Linux OS) 
         ***Note*** It is strongly recommended *against modifying* the default buffer location value |
 
 ### Retrieving the buffering configuration via REST client
